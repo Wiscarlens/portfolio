@@ -10,12 +10,9 @@ import {
   FaFigma,
 } from 'react-icons/fa';
 
-import {
-  SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
-} from 'react-icons/si';
+import { SiNextdotjs, SiFramer } from 'react-icons/si';
+
+import { TbBrandAdobeXd, TbBrandAdobePhotoshop } from 'react-icons/tb';
 
 //  about data
 export const aboutData = [
@@ -25,18 +22,22 @@ export const aboutData = [
       {
         title: 'Web Development',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          <FaHtml5 key='html5' />,
+          <FaCss3 key='css3' />,
+          <FaJs key='js' />,
+          <FaReact key='react' />,
+          <SiNextdotjs key='nextjs' />,
+          <SiFramer key='framer' />,
+          <FaWordpress key='wordpress' />,
         ],
       },
       {
         title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        icons: [
+          <FaFigma key='figma' />,
+          <TbBrandAdobeXd key='adobexd' />,
+          <TbBrandAdobePhotoshop key='adobeps' />,
+        ],
       },
     ],
   },
@@ -136,7 +137,7 @@ const About = () => {
             exit='hidden'
             className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
           >
-            10 years ago, I began freelancing as a developer. Since then, I've
+            10 years ago, I began freelancing as a developer. Since then, I&apos;ve
             done remote work for agencies, counsulted for startups, and
             collaborated on digital products for business and consumer use.
           </motion.p>
@@ -225,8 +226,12 @@ const About = () => {
                   <div>{item.stage}</div>
                   <div className='flex gap-x-4'>
                     {/* icons */}
-                    {item.icons?.map((icon, itemIndex) => {
-                      return <div className='text-2xl text-white'>{icon}</div>;
+                    {item.icons?.map((icon, iconIndex) => {
+                      return (
+                        <div key={iconIndex} className='text-2xl text-white'>
+                          {icon}
+                        </div>
+                      );
                     })}
                   </div>
                 </div>
