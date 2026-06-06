@@ -26,8 +26,8 @@ const Home = () => {
             exit='hidden'
             className='h1'
           >
-            Transforming Ideas <br /> Into{' '}
-            <span className='text-accent'>Digital Reality</span>
+            Empowering Businesses Through <br />{' '}
+            <span className='text-accent'>Data-Driven Solutions</span>
           </motion.h1>
           {/* subtitle */}
           <motion.p
@@ -37,9 +37,10 @@ const Home = () => {
             exit='hidden'
             className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-            nostrum quam reprehenderit vero, tenetur voluptatem nulla aut
-            aspernatur dolores ut.
+            Hi, I&apos;m Wiscarlens — a software engineer based in Orlando, FL,
+            passionate about high-performance, scalable software design. I
+            build complete solutions from initial design through deployment
+            that help businesses streamline operations.
           </motion.p>
           {/* btn */}
           <div className='flex justify-center xl:hidden relative'>

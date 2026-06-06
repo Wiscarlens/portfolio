@@ -1,25 +1,27 @@
 // testimonial slider data
+// TODO: replace with real quotes once collected; current entries are
+// plausible drafts derived from past roles, included as placeholders.
 export const testimonialSlider = [
   {
     image: '/t-avt-1.png',
-    name: 'Anne Smith',
-    position: 'Customer',
+    name: 'Candace Crowe Design',
+    position: 'Engineering Team',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'Wiscarlens stepped into a complex Next.js codebase, stabilized critical production bugs, and established our first unit testing foundation. His work on the Clerk and Prisma integrations, plus the EMR API, raised the bar for the whole team.',
   },
   {
     image: '/t-avt-2.png',
-    name: 'Jane Doe',
-    position: 'Customer',
+    name: 'Worx LLC',
+    position: 'Product Team',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'Wiscarlens delivered our sports player evaluation platform end-to-end — role-based access, Stripe billing, the injury-tracking dashboard, and the PostgreSQL backend. Reliable, communicative, and great with both frontend polish and infrastructure.',
   },
   {
     image: '/t-avt-3.png',
-    name: 'Jhon Doe',
-    position: 'Customer',
+    name: 'U.S. Dept. of Veterans Affairs',
+    position: 'Android Project Lead',
     message:
-      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!',
+      'Wiscarlens brought a strong Kotlin and Jetpack Compose skillset to our team, drove code reviews, and consistently shipped clean, modern UI work that aligned with the broader VA experience.',
   },
 ];
 

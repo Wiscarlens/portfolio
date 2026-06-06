@@ -6,13 +6,23 @@ import {
   FaCss3,
   FaJs,
   FaReact,
-  FaWordpress,
-  FaFigma,
+  FaNodeJs,
+  FaJava,
+  FaDocker,
+  FaAndroid,
 } from 'react-icons/fa';
 
-import { SiNextdotjs, SiFramer } from 'react-icons/si';
-
-import { TbBrandAdobeXd, TbBrandAdobePhotoshop } from 'react-icons/tb';
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiPrisma,
+  SiPostgresql,
+  SiKotlin,
+  SiSpring,
+  SiNginx,
+  SiVercel,
+} from 'react-icons/si';
 
 //  about data
 export const aboutData = [
@@ -20,23 +30,35 @@ export const aboutData = [
     title: 'skills',
     info: [
       {
-        title: 'Web Development',
+        title: 'Frontend',
         icons: [
-          <FaHtml5 key='html5' />,
-          <FaCss3 key='css3' />,
-          <FaJs key='js' />,
           <FaReact key='react' />,
           <SiNextdotjs key='nextjs' />,
-          <SiFramer key='framer' />,
-          <FaWordpress key='wordpress' />,
+          <SiTypescript key='ts' />,
+          <FaJs key='js' />,
+          <FaHtml5 key='html5' />,
+          <FaCss3 key='css3' />,
+          <SiTailwindcss key='tailwind' />,
         ],
       },
       {
-        title: 'UI/UX Design',
+        title: 'Backend & Data',
         icons: [
-          <FaFigma key='figma' />,
-          <TbBrandAdobeXd key='adobexd' />,
-          <TbBrandAdobePhotoshop key='adobeps' />,
+          <FaNodeJs key='node' />,
+          <FaJava key='java' />,
+          <SiSpring key='spring' />,
+          <SiPrisma key='prisma' />,
+          <SiPostgresql key='postgres' />,
+        ],
+      },
+      {
+        title: 'Mobile & DevOps',
+        icons: [
+          <FaAndroid key='android' />,
+          <SiKotlin key='kotlin' />,
+          <FaDocker key='docker' />,
+          <SiNginx key='nginx' />,
+          <SiVercel key='vercel' />,
         ],
       },
     ],
@@ -45,12 +67,8 @@ export const aboutData = [
     title: 'awards',
     info: [
       {
-        title: 'Webby Awards - Honoree',
-        stage: '2011 - 2012',
-      },
-      {
-        title: 'Adobe Design Achievement Awards - Finalist',
-        stage: '2009 - 2010',
+        title: '3rd Place — Google Extended I/O Hackathon',
+        stage: '2024',
       },
     ],
   },
@@ -58,16 +76,20 @@ export const aboutData = [
     title: 'experience',
     info: [
       {
-        title: 'UX/UI Designer - XYZ Company',
-        stage: '2012 - 2023',
+        title: 'Solutions Analyst | Software Engineer — Deloitte',
+        stage: '2025 – Present',
       },
       {
-        title: 'Web Developer - ABC Agency',
-        stage: '2010 - 2012',
+        title: 'Full-stack Developer — Candace Crowe Design',
+        stage: '2025',
       },
       {
-        title: 'Intern - DEF Corporation',
-        stage: '2008 - 2010',
+        title: 'Full-stack Developer — Worx LLC',
+        stage: '2024 – 2025',
+      },
+      {
+        title: 'Android Developer — U.S. Department of Veterans Affairs',
+        stage: '2023 – 2024',
       },
     ],
   },
@@ -75,16 +97,20 @@ export const aboutData = [
     title: 'credentials',
     info: [
       {
-        title: 'Web Development - ABC University, LA, CA',
-        stage: '2011',
+        title: 'B.S. Computer Science — Valencia College',
+        stage: '2021 – 2024',
       },
       {
-        title: 'Computer Science Diploma - AV Technical Institute',
-        stage: '2009',
+        title: 'A.A. Computer Science — Valencia College',
+        stage: '2018 – 2020',
       },
       {
-        title: 'Certified Graphic Designer - ABC Institute, Los Angeles, CA',
-        stage: '2006',
+        title: 'React.js Essential Training — LinkedIn Learning',
+        stage: 'Cert.',
+      },
+      {
+        title: 'Programming with JavaScript — Meta',
+        stage: 'Cert.',
       },
     ],
   },
@@ -127,8 +153,8 @@ const About = () => {
             exit='hidden'
             className='h2'
           >
-            Captivating <span className='text-accent'>stories</span> birth
-            magnificent designs.
+            Engineering ideas into <span className='text-accent'>scalable</span>{' '}
+            production software.
           </motion.h2>
           <motion.p
             variants={fadeIn('right', 0.4)}
@@ -137,9 +163,12 @@ const About = () => {
             exit='hidden'
             className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
           >
-            10 years ago, I began freelancing as a developer. Since then, I&apos;ve
-            done remote work for agencies, counsulted for startups, and
-            collaborated on digital products for business and consumer use.
+            Over the past 4 years I&apos;ve shipped full-stack web platforms,
+            Android apps, and backend integrations across Deloitte, Candace
+            Crowe Design, Worx LLC, and the U.S. Department of Veterans
+            Affairs. I hold a B.S. in Computer Science from Valencia College
+            and love turning ambiguous business problems into clean,
+            well-architected software.
           </motion.p>
           {/* counters */}
           <motion.div
@@ -153,37 +182,37 @@ const About = () => {
               {/* experience */}
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={10} duration={5} /> +
+                  <CountUp start={0} end={4} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
                   Years of experience
                 </div>
               </div>
-              {/* clients */}
+              {/* companies */}
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={250} duration={5} /> +
+                  <CountUp start={0} end={5} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Satisfied clients
+                  Companies worked at
                 </div>
               </div>
               {/* projects */}
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={650} duration={5} /> +
+                  <CountUp start={0} end={10} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Finished projects
+                  Projects shipped
                 </div>
               </div>
               {/* awards */}
               <div className='relative flex-1'>
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={8} duration={5} /> +
+                  <CountUp start={0} end={1} duration={5} />
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Winning awards
+                  Hackathon award
                 </div>
               </div>
             </div>
