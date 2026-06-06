@@ -1,34 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Wiscarlens Lucius — Portfolio
+
+Personal portfolio site for Wiscarlens Lucius, a software engineer based in
+Orlando, FL. Built with Next.js, Tailwind CSS, Framer Motion, and Swiper.
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Scripts
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- `npm run dev` — start the development server
+- `npm run build` — build for production
+- `npm start` — serve the production build
+- `npm run lint` — run ESLint
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Project Structure
 
-## Learn More
+- `pages/` — routes (home, about, services, work, testimonials, contact)
+- `components/` — shared UI (Header, Nav, Socials, Sliders, etc.)
+- `public/` — static assets (avatar, logo, project thumbnails)
 
-To learn more about Next.js, take a look at the following resources:
+## Content Updates
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Most personal content lives in data arrays so it can be edited without
+touching markup:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `pages/about/index.js` — `aboutData` (skills, awards, experience, credentials)
+- `components/ServiceSlider.js` — `serviceData`
+- `components/WorkSlider.js` — `workSlider.slides`
+- `components/TestimonialSlider.js` — `testimonialSlider`
+- `components/Socials.js` — social links
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Swap images in `public/` (keep the same filenames) to update the avatar,
+logo, project thumbnails, or testimonial avatars without code changes.

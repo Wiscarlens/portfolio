@@ -8,11 +8,11 @@ import 'swiper/css/pagination';
 
 // icons
 import {
-  RxCrop,
   RxDesktop,
-  RxPencil2,
-  RxReader,
+  RxMobile,
   RxRocket,
+  RxComponent1,
+  RxPencil2,
   RxArrowTopRight,
 } from 'react-icons/rx';
 
@@ -22,29 +22,34 @@ import { FreeMode, Pagination } from 'swiper/modules';
 // service data
 export const serviceData = [
   {
-    icon: <RxCrop />,
-    title: 'Branding',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    icon: <RxPencil2 />,
-    title: 'Design',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
     icon: <RxDesktop />,
-    title: 'Development',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Full-Stack Web Development',
+    description:
+      'End-to-end web apps with Next.js, TypeScript, React, and Node.js — from architecture to deployment.',
   },
   {
-    icon: <RxReader />,
-    title: 'Copywriting',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    icon: <RxMobile />,
+    title: 'Mobile Development',
+    description:
+      'Modern Android apps in Kotlin and Jetpack Compose with clean, intuitive UI.',
   },
   {
     icon: <RxRocket />,
-    title: 'SEO',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    title: 'Backend & API Engineering',
+    description:
+      'Secure, scalable REST APIs, authentication (Clerk), and third-party integrations (Stripe, EMR).',
+  },
+  {
+    icon: <RxComponent1 />,
+    title: 'Database & DevOps',
+    description:
+      'PostgreSQL, Prisma ORM, Docker, NGINX, Vercel — serverless and self-hosted deployments.',
+  },
+  {
+    icon: <RxPencil2 />,
+    title: 'UI/UX Implementation',
+    description:
+      'Translating Figma designs into pixel-accurate, accessible, responsive interfaces.',
   },
 ];
 

@@ -31,8 +31,8 @@ const Services = () => {
               exit='hidden'
               className='mb-4 max-w-[400px] mx-auto lg:mx-0'
             >
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
-              eveniet dignissimos distinctio tempore harum laudantium.
+              What I bring to teams — from design through deployment, across
+              the stack.
             </motion.p>
           </div>
 
