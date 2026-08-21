@@ -88,7 +88,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <Nav />
         <Header />
         {/* app/template.tsx wraps children with the route-change animation. */}
-        <main className='h-full'>{children}</main>
+        <main className='min-h-screen xl:h-full'>{children}</main>
       </body>
     </html>
   );

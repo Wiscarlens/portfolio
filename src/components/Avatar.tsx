@@ -11,8 +11,7 @@ const Avatar = () => {
         width={704}
         height={1433}
         alt=''
-        // className='translate-z-0 h-full w-auto object-contain max-h-[678px]'
-        className='translate-z-0 w-full h-full w-auto object-contain max-h-[1050px]'
+        className='translate-z-0 h-full w-auto object-contain max-h-[1050px]'
       />
     </div>
   );
