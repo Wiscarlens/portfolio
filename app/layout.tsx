@@ -8,7 +8,6 @@ import '../styles/globals.css';
 import Header from '../components/Header';
 import JsonLd from '../components/JsonLd';
 import Nav from '../components/Nav';
-import PageTransition from '../components/PageTransition';
 import TopLeftImg from '../components/TopLeftImg';
 
 // metadata
@@ -88,9 +87,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <TopLeftImg />
         <Nav />
         <Header />
-        <main className='h-full'>
-          <PageTransition>{children}</PageTransition>
-        </main>
+        {/* app/template.tsx wraps children with the route-change animation. */}
+        <main className='h-full'>{children}</main>
       </body>
     </html>
   );
