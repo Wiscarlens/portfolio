@@ -5,6 +5,27 @@
 .translate-z-0 {
   transform: translateZ(0px);
 }
+
+/* Blinking block cursor on the wordmark (components/Logo.js). */
+@keyframes logo-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+.logo-cursor {
+  display: inline-block;
+  animation: logo-blink 1.1s steps(1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .logo-cursor {
+    animation: none;
+  }
+}
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets
   .swiper-pagination-bullet {

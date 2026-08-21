@@ -127,11 +127,15 @@ import { fadeIn } from '../../variants';
 // counter
 import CountUp from 'react-countup';
 
+// seo
+import Seo from '../../components/Seo';
+
 const About = () => {
   const [index, setIndex] = useState(0);
   console.log(index);
   return (
     <div className='h-full bg-primary/30 py-32 text-center xl:text-left'>
+      <Seo />
       <Circles />
       {/* avatar img */}
       <motion.div
@@ -146,7 +150,7 @@ const About = () => {
       <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
         {/* text */}
         <div className='flex-1 flex flex-col justify-center'>
-          <motion.h2
+          <motion.h1
             variants={fadeIn('right', 0.2)}
             initial='hidden'
             animate='show'
@@ -155,7 +159,7 @@ const About = () => {
           >
             Engineering ideas into <span className='text-accent'>scalable</span>{' '}
             production software.
-          </motion.h2>
+          </motion.h1>
           <motion.p
             variants={fadeIn('right', 0.4)}
             initial='hidden'

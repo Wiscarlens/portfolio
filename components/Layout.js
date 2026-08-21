@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
       <TopLeftImg />
       <Nav />
       <Header />
-      {children}
+      <main className='h-full'>{children}</main>
     </div>
   );
 };

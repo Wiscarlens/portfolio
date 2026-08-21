@@ -1,10 +1,8 @@
-// next image
-import Image from 'next/image';
-
 // next link
 import Link from 'next/link';
 
 // components
+import Logo from '../components/Logo';
 import Socials from '../components/Socials';
 
 const Header = () => {
@@ -14,13 +12,7 @@ const Header = () => {
         <div className='flex flex-col lg:flex-row justify-between items-center gap-y-6 py-8'>
           {/* logo */}
           <Link href={'/'}>
-            <Image
-              src={'/logo.svg'}
-              width={220}
-              height={48}
-              alt=''
-              priority={true}
-            />
+            <Logo size={22} variant='dark' />
           </Link>
           {/* socials */}
           <Socials />
