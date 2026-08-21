@@ -10,15 +10,20 @@
 // the overlays stayed parked at their exit position and page content stayed
 // at opacity 0 until a hard refresh.
 
+import { MotionConfig } from 'framer-motion';
 import type { ReactNode } from 'react';
 
 import Transition from '../components/Transition';
 
 export default function Template({ children }: { children: ReactNode }) {
   return (
-    <>
+    // reducedMotion='user' makes every Framer Motion animation in the tree
+    // respect the OS "reduce motion" setting — the full-screen wipe and the
+    // staggered slide-ins are exactly the kind of movement that triggers
+    // vestibular discomfort.
+    <MotionConfig reducedMotion='user'>
       <Transition />
       {children}
-    </>
+    </MotionConfig>
   );
 }
