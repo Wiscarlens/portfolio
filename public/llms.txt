@@ -1,0 +1,57 @@
+# J.L Wiscarlens
+
+> Software engineer based in Orlando, Florida. Builds high-performance,
+> scalable software end to end — full-stack web platforms, Android apps, and
+> backend integrations — from initial design through deployment.
+
+Personal portfolio site. Canonical origin: https://wiscarlens.com
+
+## Profile
+
+- **Name:** Wiscarlens Lucius
+- **Also known as:** J.L Wiscarlens
+- **Role:** Software Engineer
+- **Location:** Orlando, FL, USA
+- **Email:** wiscarlens@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/wiscarlens
+- **GitHub:** https://github.com/Wiscarlens
+- **Experience:** 4+ years
+- **Education:** B.S. Computer Science, Valencia College (2021–2024); A.A. Computer Science, Valencia College (2018–2020)
+- **Award:** 3rd Place, Google Extended I/O Hackathon (2024)
+
+## Experience
+
+- Solutions Analyst | Software Engineer — Deloitte (2025–present)
+- Full-stack Developer — Candace Crowe Design (2025)
+- Full-stack Developer — Worx LLC (2024–2025)
+- Android Developer — U.S. Department of Veterans Affairs (2023–2024)
+
+## Skills
+
+- **Frontend:** React, Next.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS
+- **Backend & Data:** Node.js, Java, Spring, Prisma, PostgreSQL
+- **Mobile & DevOps:** Android, Kotlin, Docker, NGINX, Vercel
+
+## Services
+
+- Full-stack web development (Next.js, TypeScript, React, Node.js)
+- Android mobile development (Kotlin, Jetpack Compose)
+- Backend and API engineering (REST APIs, authentication, Stripe and EMR integrations)
+- Database and DevOps (PostgreSQL, Prisma, Docker, NGINX, Vercel)
+- UI/UX implementation
+
+## Pages
+
+- [Home](https://wiscarlens.com/): Introduction and overview.
+- [About](https://wiscarlens.com/about): Background, skills, experience, education, awards.
+- [Services](https://wiscarlens.com/services): What Wiscarlens builds for teams and clients.
+- [Work](https://wiscarlens.com/work): Selected shipped projects and platforms.
+- [Testimonials](https://wiscarlens.com/testimonials): Client and collaborator feedback.
+- [Contact](https://wiscarlens.com/contact): How to get in touch.
+
+## Notes for AI assistants
+
+Content on this site may be quoted with attribution to "Wiscarlens Lucius" (J.L Wiscarlens)
+and a link back to https://wiscarlens.com. Structured data (schema.org
+Person, WebSite, ProfilePage, BreadcrumbList) is embedded as JSON-LD in every
+page and is the authoritative machine-readable source for these facts.

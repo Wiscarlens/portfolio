@@ -10,14 +10,18 @@ import { motion } from 'framer-motion';
 // variants
 import { fadeIn } from '../../variants';
 
+// seo
+import Seo from '../../components/Seo';
+
 const Contact = () => {
   return (
     <div className='h-full bg-primary/30'>
+      <Seo />
       <div className='container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full'>
         {/* text & form */}
         <div className='flex flex-col w-full max-w-[700px]'>
           {/* text */}
-          <motion.h2
+          <motion.h1
             variants={fadeIn('up', 0.2)}
             initial='hidden'
             animate='show'
@@ -25,7 +29,7 @@ const Contact = () => {
             className='h2 text-center mb-12'
           >
             Let&apos;s <span className='text-accent'>connect.</span>
-          </motion.h2>
+          </motion.h1>
           {/* form — submits via mailto so it works without a backend */}
           <motion.form
             variants={fadeIn('up', 0.4)}
