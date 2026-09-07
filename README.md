@@ -96,7 +96,7 @@ Most personal content lives in typed data arrays so it can be edited without
 touching markup:
 
 - `src/app/about/content.tsx` — `aboutData` (skills, awards, experience, credentials)
-- `src/components/ServiceSlider.tsx` — `serviceData`
+- `src/components/Capabilities.tsx` — `capabilities`
 - `src/components/WorkSlider.tsx` — `workSlider.slides`
 - `src/components/TestimonialSlider.tsx` — `testimonialSlider`
 - `src/components/Socials.tsx` — social links

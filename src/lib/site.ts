@@ -172,14 +172,16 @@ export const pages: PageMeta[] = [
       'About — background, skills (React, Next.js, TypeScript, Java, Spring, Kotlin, PostgreSQL, Docker), work experience, education, and awards.',
   },
   {
+    // URL stays /services: it's a stable, sensible path and the page has
+    // simply been reframed from a rate card into a capability summary.
     path: '/services',
-    title: 'Services',
+    title: 'What I do',
     description:
-      'Full-stack web development, Android mobile development, backend and API engineering, database and DevOps work, and UI/UX implementation — from architecture through deployment.',
+      'Full-stack web development, Android mobile development, backend and API engineering, database and DevOps, and UI/UX implementation, from architecture through deployment.',
     changefreq: 'monthly',
     priority: 0.8,
     summary:
-      'Services — full-stack web development, mobile development, backend and API engineering, database and DevOps, and UI/UX implementation.',
+      'What I do: full-stack web development, mobile development, backend and API engineering, database and DevOps, and UI/UX implementation.',
   },
   {
     path: '/work',
@@ -212,6 +214,27 @@ export const pages: PageMeta[] = [
       'Contact — reach Wiscarlens Lucius by email or through the contact form.',
   },
 ];
+
+/**
+ * Routes that exist in the codebase but are switched off.
+ *
+ * A disabled route is dropped from the nav and the sitemap AND returns 404,
+ * so it can't be reached, linked, or indexed while it's off. Unlinking alone
+ * isn't enough: the URL stays crawlable and the content stays quotable.
+ *
+ * To turn a page back on, remove it from this array. The nav, the sitemap and
+ * the route all follow automatically. The one manual step is restoring its
+ * line in public/llms.txt, which is a static file.
+ */
+export const disabledRoutes: string[] = ['/testimonials'];
+
+export const isRouteEnabled = (path: string): boolean =>
+  !disabledRoutes.includes(path);
+
+/** Live routes only. Drives the nav and the sitemap. */
+export const enabledPages: PageMeta[] = pages.filter((p) =>
+  isRouteEnabled(p.path)
+);
 
 /**
  * Absolute URL for a site-relative path. The root resolves to the bare origin

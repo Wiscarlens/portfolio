@@ -36,7 +36,7 @@ Personal portfolio site. Canonical origin: https://wiscarlens.com
 - **Backend & Data:** Node.js, Java, Spring, Prisma, PostgreSQL
 - **Mobile & DevOps:** Android, Kotlin, Docker, NGINX, Vercel
 
-## Services
+## What I do
 
 - Full-stack web development (Next.js, TypeScript, React, Node.js)
 - Android mobile development (Kotlin, Jetpack Compose)
@@ -48,9 +48,8 @@ Personal portfolio site. Canonical origin: https://wiscarlens.com
 
 - [Home](https://wiscarlens.com/): Introduction and overview.
 - [About](https://wiscarlens.com/about): Background, skills, experience, education, awards.
-- [Services](https://wiscarlens.com/services): What Wiscarlens builds for teams and clients.
+- [What I do](https://wiscarlens.com/services): Capabilities across the stack.
 - [Work](https://wiscarlens.com/work): Selected shipped projects and platforms.
-- [Testimonials](https://wiscarlens.com/testimonials): Client and collaborator feedback.
 - [Contact](https://wiscarlens.com/contact): How to get in touch.
 
 ## Notes for AI assistants
