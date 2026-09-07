@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Sora } from 'next/font/google';
+import { JetBrains_Mono, Sora } from 'next/font/google';
 import type { ReactNode } from 'react';
 
 import '../styles/globals.css';
@@ -18,6 +18,14 @@ const sora = Sora({
   subsets: ['latin'],
   variable: '--font-sora',
   weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
+});
+
+// Loaded here rather than inside Logo so the wordmark and the dated rows in
+// About share one font instance instead of requesting it twice.
+const mono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+  weight: ['400', '500'],
 });
 
 // Defaults every route inherits. Individual pages override title,
@@ -61,6 +69,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: site.defaultTitle,
     description: site.description,
+    creator: site.twitterHandle,
   },
   // Next serves the manifest from app/manifest.ts at this path.
   manifest: '/manifest.webmanifest',
@@ -80,7 +89,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang={site.lang}>
       <body
-        className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
+        className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} ${mono.variable} font-sora relative`}
       >
         {/* Site-wide entity graph (Person + WebSite), on every page. */}
         <JsonLd graph={siteGraph()} />

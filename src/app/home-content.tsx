@@ -17,6 +17,16 @@ const HomeContent = () => {
       {/* text */}
       <div className='w-full min-h-screen xl:h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10'>
         <div className='page-shell text-center flex flex-col justify-start xl:justify-center xl:pt-40 xl:text-left min-h-screen xl:h-full container mx-auto'>
+          {/* tagline */}
+          <motion.div
+            variants={fadeIn('down', 0.1)}
+            initial='hidden'
+            animate='show'
+            exit='hidden'
+            className='text-accent uppercase tracking-[3px] text-xs xl:text-sm mb-4'
+          >
+            From Hello World to Hello Revenue
+          </motion.div>
           {/* title */}
           <motion.h1
             variants={fadeIn('down', 0.2)}
@@ -25,8 +35,8 @@ const HomeContent = () => {
             exit='hidden'
             className='h1'
           >
-            Empowering Businesses Through <br />{' '}
-            <span className='text-accent'>Data-Driven Solutions</span>
+            I turn ideas into <br />{' '}
+            <span className='text-accent'>production-ready software.</span>
           </motion.h1>
           {/* subtitle */}
           <motion.p
@@ -36,10 +46,11 @@ const HomeContent = () => {
             exit='hidden'
             className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
           >
-            Hi, I&apos;m Wiscarlens — a software engineer based in Orlando, FL,
-            passionate about high-performance, scalable software design. I
-            build complete solutions from initial design through deployment
-            that help businesses streamline operations.
+            I&apos;m a software engineer in Orlando, FL, and I take ownership
+            of the whole journey: architecture, development, deployment, and
+            growth. Whether it&apos;s a SaaS platform, internal business
+            software, or a new product idea, the goal stays the same. Ship
+            software people use and businesses benefit from.
           </motion.p>
           {/* btn */}
           <div className='flex justify-center xl:hidden relative'>

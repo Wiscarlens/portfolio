@@ -50,7 +50,10 @@
     /* pb-20 reserves the exact height of the fixed bottom nav bar (80px).
        Padding inside the page can't do this — the nav floats above the scroll
        area, so the reservation has to live on the scroll container itself. */
-    @apply w-full min-h-screen pb-20 xl:pb-0;
+    /* overflow-x-hidden clips the decorative art that deliberately sits
+       outside the viewport (Circles at -right-16, the avatar). Vertical
+       scrolling stays intact; only the sideways bleed is trimmed. */
+    @apply w-full min-h-screen overflow-x-hidden pb-20 xl:pb-0;
   }
   @screen xl {
     body {
