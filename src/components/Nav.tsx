@@ -16,17 +16,17 @@ import {
 type NavItem = { name: string; path: string; icon: ReactNode };
 
 export const navData: NavItem[] = [
-  { name: 'home', path: '/', icon: <HiHome /> },
-  { name: 'about', path: '/about', icon: <HiUser /> },
-  { name: 'services', path: '/services', icon: <HiRectangleGroup /> },
-  { name: 'work', path: '/work', icon: <HiViewColumns /> },
+  { name: 'Home', path: '/', icon: <HiHome /> },
+  { name: 'About', path: '/about', icon: <HiUser /> },
+  { name: 'What I do', path: '/services', icon: <HiRectangleGroup /> },
+  { name: 'Work', path: '/work', icon: <HiViewColumns /> },
   {
-    name: 'testimonials',
+    name: 'Testimonials',
     path: '/testimonials',
     icon: <HiChatBubbleBottomCenterText />,
   },
   {
-    name: 'contact',
+    name: 'Contact',
     path: '/contact',
     icon: <HiEnvelope />,
   },
@@ -37,6 +37,9 @@ import Link from 'next/link';
 
 // next router (App Router: pathname comes from next/navigation)
 import { usePathname } from 'next/navigation';
+
+// site config
+import { isRouteEnabled } from '../lib/site';
 
 const Nav = () => {
   const pathname = usePathname();
@@ -49,7 +52,7 @@ const Nav = () => {
         className='flex w-full xl:flex-col items-center justify-between xl:justify-center gap-y-10 px-4 md:px-40 xl:px-0 h-[80px] xl:h-max py-8 bg-white/10
       backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full'
       >
-        {navData.map((link, index) => {
+        {navData.filter((link) => isRouteEnabled(link.path)).map((link, index) => {
           return (
             <Link
               className={`${
@@ -63,7 +66,7 @@ const Nav = () => {
               {/* tooltip */}
               <div className='absolute pr-14 right-0 hidden xl:group-hover:flex'>
                 <div className='bg-white relative flex text-primary items-center p-[6px] rounded-[3px]'>
-                  <div className='text-[12px] leading-none font-semibold capitalize'>
+                  <div className='text-[12px] leading-none font-semibold'>
                     {link.name}
                   </div>
                   {/* triangle */}

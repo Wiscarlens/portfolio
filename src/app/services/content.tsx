@@ -1,7 +1,7 @@
 'use client';
 
 // components
-import ServiceSlider from '../../components/ServiceSlider';
+import Capabilities from '../../components/Capabilities';
 import Bulb from '../../components/Bulb';
 import Circles from '../../components/Circles';
 
@@ -25,7 +25,7 @@ const ServicesContent = () => {
               exit='hidden'
               className='h2 xl:mt-8'
             >
-              My services <span className='text-accent'>.</span>
+              What I do <span className='text-accent'>.</span>
             </motion.h1>
             <motion.p
               variants={fadeIn('up', 0.4)}
@@ -34,21 +34,17 @@ const ServicesContent = () => {
               exit='hidden'
               className='mb-4 max-w-[400px] mx-auto lg:mx-0'
             >
-              What I bring to teams — from design through deployment, across
-              the stack.
+              What I bring to a team, from first architecture decision
+              through deployment and the work that follows.
             </motion.p>
           </div>
 
-          {/* slider */}
-          <motion.div
-            variants={fadeIn('down', 0.6)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-            className='w-full xl:max-w-[65%]'
-          >
-            <ServiceSlider />
-          </motion.div>
+          {/* Capability grid. Was a Swiper carousel, which hid three of six
+              entries behind a swipe and shipped ~88KB of JS to do it. A grid
+              shows everything at once and costs nothing. */}
+          <div className='w-full xl:max-w-[65%]'>
+            <Capabilities />
+          </div>
         </div>
       </div>
       <Bulb />
