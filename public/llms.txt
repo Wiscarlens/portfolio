@@ -34,12 +34,12 @@ Personal portfolio site. Canonical origin: https://wiscarlens.com
 
 - **Frontend:** React, Next.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS
 - **Backend & Data:** Node.js, Java, Spring, Prisma, PostgreSQL
-- **Mobile & DevOps:** Android, Kotlin, Docker, NGINX, Vercel
+- **Mobile & DevOps:** Android, Kotlin, React Native, Docker, NGINX, Vercel
 
 ## What I do
 
 - Full-stack web development (Next.js, TypeScript, React, Node.js)
-- Android mobile development (Kotlin, Jetpack Compose)
+- Mobile development: native Android (Kotlin, Jetpack Compose) and cross-platform (React Native)
 - Backend and API engineering (REST APIs, authentication, Stripe and EMR integrations)
 - Database and DevOps (PostgreSQL, Prisma, Docker, NGINX, Vercel)
 - UI/UX implementation

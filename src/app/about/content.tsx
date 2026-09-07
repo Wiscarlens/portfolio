@@ -27,6 +27,8 @@ import {
   SiVercel,
 } from 'react-icons/si';
 
+import { TbBrandReactNative } from 'react-icons/tb';
+
 type Tech = { name: string; icon: ReactNode };
 type SkillGroup = { label: string; tech: Tech[] };
 
@@ -79,6 +81,7 @@ const skills: AboutSection = {
       label: 'Mobile & DevOps',
       tech: [
         { name: 'Android', icon: <FaAndroid /> },
+        { name: 'React Native', icon: <TbBrandReactNative /> },
         { name: 'Kotlin', icon: <SiKotlin /> },
         { name: 'Docker', icon: <FaDocker /> },
         { name: 'NGINX', icon: <SiNginx /> },
