@@ -34,15 +34,14 @@ const Socials = () => {
         <RiGithubLine />
       </Link>
       <Link
-        href='mailto:wiscarlens@gmail.com'
+        href='mailto:info@wiscarlens.com'
         aria-label='Email'
         className='hover:text-accent transition-all duration-300'
       >
         <RiMailLine />
       </Link>
-      {/* TODO: replace # with real Twitter/X handle */}
       <Link
-        href='#'
+        href='https://x.com/wiscarlens'
         target='_blank'
         rel='noopener noreferrer'
         aria-label='Twitter / X'
@@ -50,9 +49,8 @@ const Socials = () => {
       >
         <RiTwitterXLine />
       </Link>
-      {/* TODO: replace # with real Medium handle */}
       <Link
-        href='#'
+        href='https://medium.com/@wiscarlens'
         target='_blank'
         rel='noopener noreferrer'
         aria-label='Medium'

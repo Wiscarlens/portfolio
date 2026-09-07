@@ -32,7 +32,7 @@ const ContactContent = () => {
             initial='hidden'
             animate='show'
             exit='hidden'
-            action='mailto:wiscarlens@gmail.com'
+            action='mailto:info@wiscarlens.com'
             method='post'
             encType='text/plain'
             className='flex-1 flex flex-col gap-6 w-full mx-auto'

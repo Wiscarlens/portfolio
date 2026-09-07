@@ -16,7 +16,7 @@ export const person = {
   givenName: 'Wiscarlens',
   familyName: 'Lucius',
   jobTitle: 'Software Engineer',
-  email: 'wiscarlens@gmail.com',
+  email: 'info@wiscarlens.com',
   city: 'Orlando',
   region: 'FL',
   regionName: 'Florida',
@@ -26,6 +26,8 @@ export const person = {
   sameAs: [
     'https://www.linkedin.com/in/wiscarlens',
     'https://github.com/Wiscarlens',
+    'https://x.com/wiscarlens',
+    'https://medium.com/@wiscarlens',
   ],
   alumniOf: 'Valencia College',
   worksFor: 'Deloitte',
@@ -53,13 +55,86 @@ export const site = {
   titleSuffix: person.brandName,
   defaultTitle: person.brandName,
   description:
-    'Wiscarlens Lucius is a software engineer in Orlando, FL building high-performance, scalable full-stack web platforms, Android apps, and backend integrations — from initial design through deployment.',
+    'Wiscarlens Lucius is a software engineer in Orlando, FL who turns ideas into production-ready software, from architecture through deployment and growth.',
   locale: 'en_US',
   lang: 'en',
   themeColor: '#131424',
   accentColor: '#F13024',
-  twitterHandle: null, // set to '@handle' once a Twitter/X account exists
+  twitterHandle: '@wiscarlens',
 };
+
+export type Role = {
+  role: string;
+  org: string;
+  /** Display period on the page. Year-level on purpose: month precision
+   *  belongs in the structured data, not in a compact portfolio row. */
+  period: string;
+  /** ISO 8601 start, month precision where known (e.g. '2024-05'). */
+  startDate: string;
+  /** ISO 8601 end; null while ongoing. */
+  endDate: string | null;
+};
+
+export type Credential = {
+  title: string;
+  org: string;
+  period: string;
+  kind: 'degree' | 'certificate';
+};
+
+export type Award = { title: string; org: string; year: string };
+
+/**
+ * Résumé data. Lives here rather than in the About page component so the page
+ * and the JSON-LD Person graph can't drift apart.
+ */
+export const experience: Role[] = [
+  {
+    role: 'Solutions Analyst | Software Engineer',
+    org: 'Deloitte',
+    period: '2025 – Present',
+    startDate: '2025-10',
+    endDate: null,
+  },
+  {
+    role: 'Full-stack Developer',
+    org: 'Candace Crowe Design',
+    period: '2025',
+    startDate: '2025-04',
+    endDate: '2025-10',
+  },
+  {
+    role: 'Full-stack Developer',
+    org: 'Worx LLC',
+    period: '2024 – 2025',
+    startDate: '2024-05',
+    endDate: '2025-03',
+  },
+  {
+    role: 'Android Developer Intern',
+    org: 'U.S. Department of Veterans Affairs',
+    period: '2023 – 2024',
+    startDate: '2023-09',
+    endDate: '2024-06',
+  },
+];
+
+export const credentials: Credential[] = [
+  {
+    title: 'B.S. Software Engineering',
+    org: 'Valencia College',
+    period: '2021 – 2024',
+    kind: 'degree',
+  },
+];
+
+export const awards: Award[] = [
+  {
+    title: '3rd Place, Google Extended I/O Hackathon',
+    org: 'Google',
+    year: '2024',
+  },
+];
 
 export type PageMeta = {
   /** Route path, e.g. '/about'. */

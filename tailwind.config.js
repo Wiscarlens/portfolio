@@ -30,6 +30,7 @@ module.exports = {
       },
       fontFamily: {
         sora: [`var(--font-sora)`, 'sans-serif'],
+        mono: [`var(--font-mono)`, 'ui-monospace', 'monospace'],
       },
     },
   },

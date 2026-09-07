@@ -37,6 +37,9 @@ export const pageMetadata = (path: string): Metadata => {
       card: 'summary_large_image',
       title: isHome ? title : `${title} | ${site.titleSuffix}`,
       description,
+      // Next replaces this object wholesale rather than merging it into the
+      // root layout's, so `creator` has to be repeated here.
+      creator: site.twitterHandle,
     },
   };
 };

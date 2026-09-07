@@ -1,8 +1,10 @@
 # J.L Wiscarlens
 
-> Software engineer based in Orlando, Florida. Builds high-performance,
-> scalable software end to end — full-stack web platforms, Android apps, and
-> backend integrations — from initial design through deployment.
+> Software engineer based in Orlando, Florida. Turns ideas into
+> production-ready software, taking ownership of the whole journey:
+> architecture, development, deployment, and growth. Builds SaaS platforms,
+> internal business software, and new products that people use and businesses
+> benefit from.
 
 Personal portfolio site. Canonical origin: https://wiscarlens.com
 
@@ -12,11 +14,13 @@ Personal portfolio site. Canonical origin: https://wiscarlens.com
 - **Also known as:** J.L Wiscarlens
 - **Role:** Software Engineer
 - **Location:** Orlando, FL, USA
-- **Email:** wiscarlens@gmail.com
+- **Email:** info@wiscarlens.com
 - **LinkedIn:** https://www.linkedin.com/in/wiscarlens
 - **GitHub:** https://github.com/Wiscarlens
-- **Experience:** 4+ years
-- **Education:** B.S. Computer Science, Valencia College (2021–2024); A.A. Computer Science, Valencia College (2018–2020)
+- **X:** https://x.com/wiscarlens
+- **Medium:** https://medium.com/@wiscarlens
+- **Experience:** 5+ years
+- **Education:** B.S. Software Engineering, Valencia College (2021–2024)
 - **Award:** 3rd Place, Google Extended I/O Hackathon (2024)
 
 ## Experience

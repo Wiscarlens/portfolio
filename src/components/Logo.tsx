@@ -4,10 +4,6 @@
 // cursor. Text-based rather than an image, so it stays crisp at any size and
 // costs no extra network request.
 
-import { JetBrains_Mono } from 'next/font/google';
-
-const mono = JetBrains_Mono({ subsets: ['latin'], weight: ['500'] });
-
 const ACCENT = '#F13024';
 
 type Props = {
@@ -35,7 +31,7 @@ const Logo = ({
 
   return (
     <span
-      className={`${mono.className} ${className ?? ''}`}
+      className={`font-mono ${className ?? ''}`}
       style={{
         display: 'inline-flex',
         alignItems: 'center',

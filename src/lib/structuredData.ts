@@ -2,7 +2,7 @@
 // results and what gives AI crawlers an unambiguous, machine-readable version
 // of the page instead of making them infer it from markup.
 
-import { SITE_URL, absoluteUrl, person, site } from './site';
+import { SITE_URL, absoluteUrl, awards, credentials, experience, person, site } from './site';
 
 /** A node in a schema.org @graph — object shape, no @context of its own. */
 type GraphNode = Record<string, unknown>;
@@ -32,7 +32,27 @@ export const personSchema = (): GraphNode => ({
     addressCountry: person.country,
   },
   worksFor: { '@type': 'Organization', name: person.worksFor },
-  alumniOf: { '@type': 'CollegeOrUniversity', name: person.alumniOf },
+  // Every school attended, de-duplicated — two degrees from one college is
+  // one alumniOf entry, not two.
+  alumniOf: [...new Set(credentials.filter((c) => c.kind === 'degree').map((c) => c.org))].map(
+    (name) => ({ '@type': 'CollegeOrUniversity', name })
+  ),
+  // Employment history. Without this the roles exist only as tab markup that
+  // crawlers never open.
+  hasOccupation: experience.map((job) => ({
+    '@type': 'Occupation',
+    name: job.role,
+    occupationLocation: { '@type': 'Organization', name: job.org },
+    startDate: job.startDate,
+    ...(job.endDate ? { endDate: job.endDate } : {}),
+  })),
+  hasCredential: credentials.map((c) => ({
+    '@type': 'EducationalOccupationalCredential',
+    name: c.title,
+    credentialCategory: c.kind,
+    recognizedBy: { '@type': 'Organization', name: c.org },
+  })),
+  award: awards.map((a) => `${a.title} (${a.year})`),
   knowsAbout: person.knowsAbout,
   sameAs: person.sameAs,
 });
