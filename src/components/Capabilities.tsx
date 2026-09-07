@@ -54,8 +54,8 @@ export const capabilities: Capability[] = [
     icon: <RxMobile />,
     title: 'Mobile Development',
     description:
-      'Native Android apps with modern, declarative UI and a clean architecture underneath.',
-    stack: ['Kotlin', 'Jetpack Compose'],
+      'Native Android in Kotlin, or cross-platform with React Native when one codebase should serve both stores.',
+    stack: ['Kotlin', 'Jetpack Compose', 'React Native'],
   },
   {
     icon: <RxPencil2 />,

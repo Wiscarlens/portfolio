@@ -41,6 +41,7 @@ export const person = {
     'Spring',
     'Kotlin',
     'Android Development',
+    'React Native',
     'PostgreSQL',
     'Prisma',
     'Docker',
@@ -177,7 +178,7 @@ export const pages: PageMeta[] = [
     path: '/services',
     title: 'What I do',
     description:
-      'Full-stack web development, Android mobile development, backend and API engineering, database and DevOps, and UI/UX implementation, from architecture through deployment.',
+      'Full-stack web development, mobile development in Kotlin and React Native, backend and API engineering, database and DevOps, from architecture through deployment.',
     changefreq: 'monthly',
     priority: 0.8,
     summary:
