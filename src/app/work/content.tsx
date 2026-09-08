@@ -1,7 +1,7 @@
 'use client';
 
 // components
-import WorkSlider from '../../components/WorkSlider';
+import WorkGrid from '../../components/WorkGrid';
 import Bulb from '../../components/Bulb';
 import Circles from '../../components/Circles';
 
@@ -39,16 +39,11 @@ const WorkContent = () => {
             </motion.p>
           </div>
 
-          {/* slider */}
-          <motion.div
-            variants={fadeIn('down', 0.6)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-            className='w-full xl:max-w-[65%]'
-          >
-            <WorkSlider />
-          </motion.div>
+          {/* Project grid. Was a Swiper carousel that hid four of eight
+              entries behind a swipe. */}
+          <div className='w-full xl:max-w-[65%]'>
+            <WorkGrid />
+          </div>
         </div>
       </div>
       <Bulb />
