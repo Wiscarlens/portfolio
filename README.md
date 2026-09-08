@@ -97,7 +97,7 @@ touching markup:
 
 - `src/app/about/content.tsx` — `aboutData` (skills, awards, experience, credentials)
 - `src/components/Capabilities.tsx` — `capabilities`
-- `src/components/WorkSlider.tsx` — `workSlider.slides`
+- `src/components/WorkGrid.tsx` — `projects`
 - `src/components/TestimonialSlider.tsx` — `testimonialSlider`
 - `src/components/Socials.tsx` — social links
 - `src/components/Logo.tsx` — the `~/j.l.wiscarlens` wordmark
