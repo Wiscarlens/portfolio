@@ -38,6 +38,48 @@ client `content.tsx` sibling. The split exists because Framer Motion, Swiper,
 and the particles background all need browser APIs — the server half stays
 free to export metadata, which a client component cannot do.
 
+## Docker
+
+```bash
+docker compose up -d --build
+```
+
+Serves on port 3000. Or without compose:
+
+```bash
+docker build --build-arg NEXT_PUBLIC_SITE_URL=https://wiscarlens.com -t wiscarlens-portfolio .
+docker run -d -p 3000:3000 --name wiscarlens-portfolio wiscarlens-portfolio
+```
+
+The image is a three-stage build on `node:24-bookworm-slim`, running as a
+non-root user with a healthcheck, using Next's `output: 'standalone'` so only
+the traced dependencies ship. Final size is ~295MB.
+
+### Environment variables are build-time, not runtime
+
+`NEXT_PUBLIC_*` values are inlined into the bundle during `next build`.
+Passing them with `docker run -e` does nothing — canonicals, the sitemap and
+the OG image URLs are already frozen into the image.
+
+To change the domain, rebuild:
+
+```bash
+docker build --build-arg NEXT_PUBLIC_SITE_URL=https://example.com -t wiscarlens-portfolio .
+```
+
+With compose, set `NEXT_PUBLIC_SITE_URL` in the shell or a `.env` beside
+`docker-compose.yml`, then `docker compose up -d --build`.
+
+If you later add a server-side secret (a contact-form API key, say), it must
+**not** carry the `NEXT_PUBLIC_` prefix — that prefix ships the value to the
+browser. A plain `RESEND_API_KEY` stays server-only and is read at runtime,
+so it belongs in `environment:` rather than `args:`.
+
+### Behind a reverse proxy
+
+The container listens on `0.0.0.0:3000`. Terminate TLS at nginx or Caddy and
+proxy to it; the app sets no cookies and needs no sticky sessions.
+
 ## SEO & AI Discoverability
 
 All site-wide metadata lives in one file: **`src/lib/site.ts`**. Editing the
