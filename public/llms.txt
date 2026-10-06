@@ -32,13 +32,13 @@ Personal portfolio site. Canonical origin: https://wiscarlens.com
 
 ## Skills
 
-- **Frontend:** React, Next.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS
+- **Frontend:** React, Next.js, Angular, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS
 - **Backend & Data:** Node.js, Java, Spring, Prisma, PostgreSQL
 - **Mobile & DevOps:** Android, Kotlin, React Native, Docker, NGINX, Vercel
 
 ## What I do
 
-- Full-stack web development (Next.js, TypeScript, React, Node.js)
+- Full-stack web development (Next.js, React, Angular, TypeScript, Node.js)
 - Mobile development: native Android (Kotlin, Jetpack Compose) and cross-platform (React Native)
 - Backend and API engineering (REST APIs, authentication, Stripe and EMR integrations)
 - Database and DevOps (PostgreSQL, Prisma, Docker, NGINX, Vercel)
@@ -48,8 +48,6 @@ Personal portfolio site. Canonical origin: https://wiscarlens.com
 
 - [Home](https://wiscarlens.com/): Introduction and overview.
 - [About](https://wiscarlens.com/about): Background, skills, experience, education, awards.
-- [What I do](https://wiscarlens.com/services): Capabilities across the stack.
-- [Work](https://wiscarlens.com/work): Selected shipped projects and platforms.
 - [Contact](https://wiscarlens.com/contact): How to get in touch.
 
 ## Notes for AI assistants

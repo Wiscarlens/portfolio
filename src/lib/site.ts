@@ -35,6 +35,7 @@ export const person = {
     'Full-Stack Web Development',
     'Next.js',
     'React',
+    'Angular',
     'TypeScript',
     'Node.js',
     'Java',
@@ -227,7 +228,11 @@ export const pages: PageMeta[] = [
  * the route all follow automatically. The one manual step is restoring its
  * line in public/llms.txt, which is a static file.
  */
-export const disabledRoutes: string[] = ['/testimonials'];
+export const disabledRoutes: string[] = [
+  '/testimonials',
+  '/services',
+  '/work',
+];
 
 export const isRouteEnabled = (path: string): boolean =>
   !disabledRoutes.includes(path);
