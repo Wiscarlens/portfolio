@@ -16,6 +16,7 @@ import {
 } from 'react-icons/fa';
 
 import {
+  SiAngular,
   SiNextdotjs,
   SiTypescript,
   SiTailwindcss,
@@ -60,6 +61,7 @@ const skills: AboutSection = {
       tech: [
         { name: 'React', icon: <FaReact /> },
         { name: 'Next.js', icon: <SiNextdotjs /> },
+        { name: 'Angular', icon: <SiAngular /> },
         { name: 'TypeScript', icon: <SiTypescript /> },
         { name: 'JavaScript', icon: <FaJs /> },
         { name: 'HTML5', icon: <FaHtml5 /> },

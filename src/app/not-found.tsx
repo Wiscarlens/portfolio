@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 import Circles from '../components/Circles';
+import { isRouteEnabled } from '../lib/site';
 
 export const metadata: Metadata = {
   title: 'Page not found',
@@ -32,10 +33,10 @@ export default function NotFound() {
             Back home
           </Link>
           <Link
-            href='/work'
+            href={isRouteEnabled('/work') ? '/work' : '/about'}
             className='btn rounded-full border border-white/50 px-8 flex items-center justify-center hover:border-accent transition-all duration-300'
           >
-            See my work
+            {isRouteEnabled('/work') ? 'See my work' : 'More about me'}
           </Link>
         </div>
       </div>

@@ -9,7 +9,14 @@ import Link from 'next/link';
 // icons
 import { HiArrowRight } from 'react-icons/hi2';
 
+// site config
+import { isRouteEnabled } from '../lib/site';
+
 const ProjectsBtn = () => {
+  // The label lives in rounded-text.png ("MY PROJECTS"), so this button
+  // can't be repointed without a new image. While /work is off, it goes.
+  if (!isRouteEnabled('/work')) return null;
+
   return (
     <div className='mx-auto xl:mx-0 z-10'>
       <Link

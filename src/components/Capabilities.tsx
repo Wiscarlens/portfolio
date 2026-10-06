@@ -27,7 +27,7 @@ export const capabilities: Capability[] = [
     title: 'Full-Stack Web Development',
     description:
       'End-to-end products, from the first architecture decision to what runs in production.',
-    stack: ['Next.js', 'TypeScript', 'React', 'Node.js'],
+    stack: ['Next.js', 'React', 'Angular', 'TypeScript', 'Node.js'],
   },
   {
     icon: <RxMagicWand />,

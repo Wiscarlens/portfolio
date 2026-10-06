@@ -6,6 +6,9 @@ import Link from 'next/link';
 
 type Project = {
   title: string;
+  /** One line, only for entries whose name doesn't say what they are.
+   *  "Sports Player Evaluation Platform" needs none; "Aptuix" does. */
+  blurb?: string;
   /** Year shipped. Shown as mono metadata. */
   year: string;
   /** The stack, concretely. Reads better than an adjective. */
@@ -19,6 +22,14 @@ type Project = {
 // TODO: swap /thumb*.jpg for real screenshots, and add href once these have
 // public repos or live URLs.
 export const projects: Project[] = [
+  {
+    title: 'Aptuix',
+    blurb: 'Lead-to-invoice pipeline for contractors and lead sellers.',
+    year: '2025',
+    stack: ['Angular 21', 'Spring Boot', 'PostgreSQL', 'Stripe', 'WebAuthn'],
+    image: '/thumb1.jpg',
+    href: 'https://aptuix.com',
+  },
   {
     title: 'Sports Player Evaluation Platform',
     year: '2024',
@@ -48,12 +59,6 @@ export const projects: Project[] = [
     year: '2024',
     stack: ['Node.js', 'Slack API'],
     image: '/thumb2.jpg',
-  },
-  {
-    title: 'Stripe Billing Integration',
-    year: '2024',
-    stack: ['Stripe', 'Webhooks', 'Next.js'],
-    image: '/thumb3.jpg',
   },
 ];
 
@@ -106,9 +111,14 @@ const Card = ({ project, i }: { project: Project; i: number }) => (
         <span className='text-white/25'>{project.year}</span>
       </div>
       <div>
-        <h3 className='mb-1.5 text-[14px] leading-snug text-white/90'>
+        <h3 className='mb-1 text-[14px] leading-snug text-white/90'>
           {project.title}
         </h3>
+        {project.blurb && (
+          <p className='mb-1.5 text-[11.5px] leading-snug text-white/45'>
+            {project.blurb}
+          </p>
+        )}
         <p className='font-mono text-[10px] leading-relaxed text-white/30'>
           {project.stack.join('  ·  ')}
         </p>
@@ -123,7 +133,7 @@ const WorkGrid = () => (
       const shell =
         // Square corners on purpose: the corner brackets are single-sided borders,
         // and a square bracket sitting on a rounded corner reads as a mistake.
-        'group relative block h-[128px] overflow-hidden border border-white/[0.07] bg-primary/40 transition-colors duration-300 hover:border-accent/30';
+        'group relative block min-h-[128px] overflow-hidden border border-white/[0.07] bg-primary/40 transition-colors duration-300 hover:border-accent/30';
       return (
         <motion.li
           key={project.title}
@@ -132,9 +142,23 @@ const WorkGrid = () => (
           transition={{ duration: 0.5, delay: 0.15 + i * 0.07, ease: 'easeOut' }}
         >
           {project.href ? (
-            <Link href={project.href} className={shell}>
-              <Card project={project} i={i} />
-            </Link>
+            // External project links open in a new tab so the visitor keeps
+            // the portfolio; next/link is for internal routes, so a plain
+            // anchor avoids a pointless prefetch attempt on another origin.
+            project.href.startsWith('http') ? (
+              <a
+                href={project.href}
+                target='_blank'
+                rel='noopener noreferrer'
+                className={shell}
+              >
+                <Card project={project} i={i} />
+              </a>
+            ) : (
+              <Link href={project.href} className={shell}>
+                <Card project={project} i={i} />
+              </Link>
+            )
           ) : (
             // No link yet, so no anchor: an arrow that goes nowhere is worse
             // than no arrow. The card becomes clickable the moment href exists.
