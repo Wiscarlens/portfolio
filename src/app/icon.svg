@@ -1,6 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="14" fill="#131424"/>
+  <style>
+    /* An SVG favicon can carry its own media query, so one file covers both
+       browser themes. Light is the default: a dark tile reads well against a
+       pale tab strip. On a dark tab strip that same tile disappears, so the
+       plate and the slash swap. The accent block never changes — it is the
+       only part that identifies the mark at 16px. */
+    .plate { fill: #131424; }
+    .mark  { stroke: #FFFFFF; }
+    @media (prefers-color-scheme: dark) {
+      .plate { fill: #F2F2F5; }
+      .mark  { stroke: #131424; }
+    }
+  </style>
+  <rect class="plate" width="64" height="64" rx="14"/>
   <!-- the slash from the ~/ prompt, plus the block cursor -->
-  <path d="M19 47 L34 17" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round"/>
+  <path class="mark" d="M19 47 L34 17" fill="none" stroke-width="7" stroke-linecap="round"/>
   <rect x="40" y="37" width="10" height="10" fill="#F13024"/>
 </svg>
