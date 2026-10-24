@@ -73,9 +73,6 @@ export const metadata: Metadata = {
   },
   // Next serves the manifest from app/manifest.ts at this path.
   manifest: '/manifest.webmanifest',
-  verification: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
-    ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
-    : undefined,
 };
 
 export const viewport: Viewport = {
