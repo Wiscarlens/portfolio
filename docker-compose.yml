@@ -9,5 +9,9 @@ services:
     image: wiscarlens-portfolio
     container_name: wiscarlens-portfolio
     restart: unless-stopped
+    # Runtime secrets. Unlike the build args above, these are read on each
+    # request, so changing one needs a restart rather than a rebuild.
+    environment:
+      CONTACT_DISCORD_WEBHOOK_URL: ${CONTACT_DISCORD_WEBHOOK_URL:-}
     ports:
       - '3000:3000'
